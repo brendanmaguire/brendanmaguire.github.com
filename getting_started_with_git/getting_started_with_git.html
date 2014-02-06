@@ -1,0 +1,1708 @@
+<!DOCTYPE html>
+<!--
+  Copyright 2010 Google Inc.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+
+  Original slides: Marcin Wichary (mwichary@google.com)
+  Modifications: Ernest Delgado (ernestd@google.com)
+                 Alex Russell (slightlyoff@chromium.org)
+
+  landslide modifications: Adam Zapletal (adamzap@gmail.com)
+                           Nicolas Perriault (nperriault@gmail.com)
+-->
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Getting Started With git</title>
+    <!-- Styles -->
+    
+    <link rel="stylesheet" media="print" href="theme/css/print.css">
+    <link rel="stylesheet" media="screen, projection" href="theme/css/screen.css">
+    
+    
+    <!-- /Styles -->
+    <!-- Javascripts -->
+    
+    <script type="text/javascript" src="theme/js/slides.js"></script>
+    
+    
+    <!-- /Javascripts -->
+</head>
+<body>
+  <div id="blank"></div>
+  <div class="presentation">
+    <div id="current_presenter_notes">
+      <div id="presenter_note"></div>
+    </div>
+    <div class="slides">
+      
+      <!-- slide source: ../getting_started_with_git.markdown -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Getting Started With git</h1></header>
+            
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="../getting_started_with_git.markdown">../getting_started_with_git.markdown</a>
+            </aside>
+            
+            <aside class="page_number">
+              1/38
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: ../getting_started_with_git.markdown -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>What is version control?</h1></header>
+            
+            
+            <section><ul>
+<li>Version Control Systems refer to systems you can use to manage your source code</li>
+<li>It provides you with a history of the changes that have been made to a code repository</li>
+<li>Allows you to revert to a previous versions of your code (safety net)</li>
+<li>It allows many people to work on a code repository at the same time</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="../getting_started_with_git.markdown">../getting_started_with_git.markdown</a>
+            </aside>
+            
+            <aside class="page_number">
+              2/38
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: ../getting_started_with_git.markdown -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>What is git?</h1></header>
+            
+            
+            <section><ul>
+<li>git is a Decentralised Version Control System</li>
+<li>Not necessary to have one central server</li>
+<li>You can make changes to the code and commit them even if you don't have access to a central server</li>
+<li>You only push these changes to other people when you want to</li>
+<li>You can view the history (and compare the files at different revisions) without needing access to a central server</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="../getting_started_with_git.markdown">../getting_started_with_git.markdown</a>
+            </aside>
+            
+            <aside class="page_number">
+              3/38
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: ../getting_started_with_git.markdown -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Installing git on Linux</h1></header>
+            
+            
+            <section><p>On Debian based systems:</p>
+<p><code>sudo apt-get install git</code></p>
+<p>On RedHat based systems:</p>
+<p><code>sudo yum install git</code></p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="../getting_started_with_git.markdown">../getting_started_with_git.markdown</a>
+            </aside>
+            
+            <aside class="page_number">
+              4/38
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: ../getting_started_with_git.markdown -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Configuring your git user profile</h1></header>
+            
+            
+            <section><p>Git must be configured so that your commits carry your information</p>
+<p><code>git config --global user.email "johndoe@example.com"</code></p>
+<p><code>git config --global user.name "John Doe"</code></p>
+<p>Pick your favourite terminal based editor (if you don't know what your favourite is then nano is the path of least resistance)</p>
+<p>Other options are vim, emacs, pico, gedit...</p>
+<p><code>git config --global core.editor nano</code></p>
+<p>Let's make things pretty!</p>
+<p><code>git config --global color.ui true</code></p>
+<p><strong><em>Note</em></strong>: You can also edit the <a href="http://git-scm.com/book/ch7-1.html">configuration file</a> directly if you wish. It is located at ~/.gitconfig</p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="../getting_started_with_git.markdown">../getting_started_with_git.markdown</a>
+            </aside>
+            
+            <aside class="page_number">
+              5/38
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: ../getting_started_with_git.markdown -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Exercise - Set up your profile using git config</h1></header>
+            
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="../getting_started_with_git.markdown">../getting_started_with_git.markdown</a>
+            </aside>
+            
+            <aside class="page_number">
+              6/38
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: ../getting_started_with_git.markdown -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            <header><h1>git init - Creating a repository</h1></header>
+            
+            
+            <section><p>Before you write any code you will need to create a repository</p>
+<div class="highlight"><pre>mkdir my-repo
+<span class="nb">cd </span>my-repo
+git init
+</pre></div>
+
+<p>This creates the hidden .git folder which git needs to keep track of the state of the repository.</p>
+<p><strong><em>Note</em></strong>: You <em>normally</em> shouldn't have to touch these files. Doing so usually leads to bad things</p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="../getting_started_with_git.markdown">../getting_started_with_git.markdown</a>
+            </aside>
+            
+            <aside class="page_number">
+              7/38
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: ../getting_started_with_git.markdown -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>git status - Viewing Repository Status</h1></header>
+            
+            
+            <section><p>Use this to view the working tree status. This shows files that are in the following states:</p>
+<ul>
+<li>Modified</li>
+<li>Added</li>
+<li>Deleted</li>
+<li>Renamed</li>
+<li>Copied</li>
+<li>Untracked (not yet added to staging)</li>
+</ul>
+<p><code>git status</code></p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="../getting_started_with_git.markdown">../getting_started_with_git.markdown</a>
+            </aside>
+            
+            <aside class="page_number">
+              8/38
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: ../getting_started_with_git.markdown -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>The staging area</h1></header>
+            
+            
+            <section><ul>
+<li>git is slightly different from most other version control systems in that it has a staging area</li>
+<li>The staging area is a temporary area to store your work before committing it</li>
+<li>It allows you to structure your commits in a way that suits you best</li>
+</ul>
+<h2>A commit lifecycle</h2>
+<p>Locally Modified File(s) --&gt; Staging Area --&gt; Committed</p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="../getting_started_with_git.markdown">../getting_started_with_git.markdown</a>
+            </aside>
+            
+            <aside class="page_number">
+              9/38
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: ../getting_started_with_git.markdown -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>git add/rm - Adding and removing files</h1></header>
+            
+            
+            <section><p>Add a specific file to the staging area</p>
+<p><code>git add &lt;file&gt;...</code></p>
+<p>Add all files to the staging area</p>
+<p><code>git add .</code></p>
+<p>You added a file by mistake. Remove a file from staging</p>
+<p><code>git rm --cached &lt;file&gt;...</code></p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="../getting_started_with_git.markdown">../getting_started_with_git.markdown</a>
+            </aside>
+            
+            <aside class="page_number">
+              10/38
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: ../getting_started_with_git.markdown -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>git commit - Committing your changeset</h1></header>
+            
+            
+            <section><p>Use git commit when you are happy with the changes to your files</p>
+<p><code>git commit</code></p>
+<p>This will open your editor so you can write a changeset message</p>
+<p>Some useful commit options:</p>
+<ul>
+<li><strong><em>-a | --all</em></strong> : Bypass the staging area process for files already under version control</li>
+<li><strong><em>-m=&lt;msg&gt; | --message=&lt;msg&gt;</em></strong> : Specify your commit message</li>
+<li><strong><em>--amend</em></strong> : Add the current changes in the staging area to the last commit in history</li>
+</ul>
+<p><strong><em>Tip</em></strong>: Commit often. It saves you from deleting work by mistake. You can always clean up your history if you want later</p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="../getting_started_with_git.markdown">../getting_started_with_git.markdown</a>
+            </aside>
+            
+            <aside class="page_number">
+              11/38
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: ../getting_started_with_git.markdown -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>git log - Viewing the repository history</h1></header>
+            
+            
+            <section><p>Use git log to view the commits in a repository</p>
+<p><code>git log</code></p>
+<p>Some useful commit options:</p>
+<ul>
+<li><strong><em>-&lt;number&gt; | -n &lt;number&gt;</em></strong> : Limit the number of commits to list</li>
+<li><strong><em>--graph</em></strong> : A text based graph</li>
+<li><strong><em>git log &lt;file&gt;...</em></strong> : Show commits that affected the specified file(s)</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="../getting_started_with_git.markdown">../getting_started_with_git.markdown</a>
+            </aside>
+            
+            <aside class="page_number">
+              12/38
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: ../getting_started_with_git.markdown -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Exercise - Create a repository and make a commit</h1></header>
+            
+            
+            <section><ul>
+<li>Initialise a repository</li>
+<li>Create a text file within</li>
+<li>Add the file to the staging area</li>
+<li>Commit the file</li>
+<li>View your history</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="../getting_started_with_git.markdown">../getting_started_with_git.markdown</a>
+            </aside>
+            
+            <aside class="page_number">
+              13/38
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: ../getting_started_with_git.markdown -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>git diff - Viewing the changes to your tracked files</h1></header>
+            
+            
+            <section><p>You will want to view the changes you have made before you commit</p>
+<ul>
+<li>View changes in your working directory</li>
+</ul>
+<p><code>git diff</code></p>
+<ul>
+<li>View changes in your staging area</li>
+</ul>
+<p><code>git diff --cached</code></p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="../getting_started_with_git.markdown">../getting_started_with_git.markdown</a>
+            </aside>
+            
+            <aside class="page_number">
+              14/38
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: ../getting_started_with_git.markdown -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>The GUI friendly way</h1></header>
+            
+            
+            <section><ul>
+<li>Now the <em>'easy'</em> way!</li>
+<li>There are many graphical tools for managing your git repositories</li>
+<li>My suggestions:<ul>
+<li>gitg : git GUI client (Built for GNOME but works *everywhere)</li>
+<li>tig : A ncurses based client</li>
+</ul>
+</li>
+<li>An extensive list can be found <a href="https://git.wiki.kernel.org/index.php/InterfacesFrontendsAndTools#Graphical_Interfaces">here</a></li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="../getting_started_with_git.markdown">../getting_started_with_git.markdown</a>
+            </aside>
+            
+            <aside class="page_number">
+              15/38
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: ../getting_started_with_git.markdown -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Exercise - Viewing changes to your repo</h1></header>
+            
+            
+            <section><ul>
+<li>Make some changes to the file(s) in your repo</li>
+<li>Create a new file</li>
+<li>View the diff for your working directory and staging area</li>
+<li>Add the new file and the changes to your existing file(s) to your staging area</li>
+<li>View the diff of your working directoy and staging area</li>
+<li>Install gitg and enjoy the GUI!</li>
+<li>Commit your changes (You can use gitg or the command line interface)</li>
+</ul>
+<p><strong><em>Note</em></strong>: During all of the above steps make lots of use of the <em>git status</em> command. It is very helpful for letting you know what is happening in your repo</p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="../getting_started_with_git.markdown">../getting_started_with_git.markdown</a>
+            </aside>
+            
+            <aside class="page_number">
+              16/38
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: ../getting_started_with_git.markdown -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>.gitignore - Ignoring files</h1></header>
+            
+            
+            <section><ul>
+<li>The gitignore file allows you to tell git to ignore certain files and not list them in your status output</li>
+<li>This is useful when you are building artifacts in the working directory that you don't want to be commited</li>
+<li>Examples are:<ul>
+<li>compiled files</li>
+<li>binary executables</li>
+<li>third party libraries</li>
+</ul>
+</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="../getting_started_with_git.markdown">../getting_started_with_git.markdown</a>
+            </aside>
+            
+            <aside class="page_number">
+              17/38
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: ../getting_started_with_git.markdown -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Exercise - Add .javac files to your .gitignore</h1></header>
+            
+            
+            <section><ul>
+<li>Modify your .gitignore to tell git to ignore *.javac files</li>
+<li>Create a file called prog.javac</li>
+<li>Use git status to see that it is correctly ignored</li>
+<li>.gitignore must be under version control also - Add it to staging and commit</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="../getting_started_with_git.markdown">../getting_started_with_git.markdown</a>
+            </aside>
+            
+            <aside class="page_number">
+              18/38
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: ../getting_started_with_git.markdown -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>git checkout - Reverting changes to the working directory</h1></header>
+            
+            
+            <section><p>Sometimes you realise that the changes you have made have actualy made the code worse and you want to revert to the last committed version of the files</p>
+<p>git checkout will discard all changes you have made to the file. This will not affect files in the staging area</p>
+<p><code>git checkout -- &lt;file&gt;...</code></p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="../getting_started_with_git.markdown">../getting_started_with_git.markdown</a>
+            </aside>
+            
+            <aside class="page_number">
+              19/38
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: ../getting_started_with_git.markdown -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>git reset - Reverting changes in the staging area</h1></header>
+            
+            
+            <section><p>Remove the file(s) from the staging area but keep the changes in your working directory</p>
+<p><code>git reset HEAD &lt;file&gt;...</code></p>
+<p>Remove all files from the staging area and discard their changes totally
+<strong>Danger</strong>: There is no coming back from this!</p>
+<p><code>git reset HEAD --hard</code></p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="../getting_started_with_git.markdown">../getting_started_with_git.markdown</a>
+            </aside>
+            
+            <aside class="page_number">
+              20/38
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: ../getting_started_with_git.markdown -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>git branch - Working on multiple features at once</h1></header>
+            
+            
+            <section><ul>
+<li>You will often have situations where you will want to work on multiple seperate features at the same time</li>
+<li>Branching allows you to do this</li>
+<li>In this repository there are two live branches; new-secret-feature &amp; big-bad-bug-fix</li>
+<li>
+<p>Both can be worked on without affecting the other</p>
+</li>
+<li>
+<p>IMAGE FROM gitg goes here</p>
+</li>
+<li>
+<p>View branches as a pointer to a particular revision</p>
+</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="../getting_started_with_git.markdown">../getting_started_with_git.markdown</a>
+            </aside>
+            
+            <aside class="page_number">
+              21/38
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: ../getting_started_with_git.markdown -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>git branch - Creating a branch</h1></header>
+            
+            
+            <section><p><code>git branch &lt;branchname&gt; [&lt;start-point&gt;]</code></p>
+<ul>
+<li>This will create a new branch</li>
+<li>You must supply a branch name</li>
+<li>If you do not supply a start point then the branch will </li>
+</ul>
+<p><strong><em>Note</em></strong>: Creating a branch does not mean you are now on that branch automatically. It must be checked out</p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="../getting_started_with_git.markdown">../getting_started_with_git.markdown</a>
+            </aside>
+            
+            <aside class="page_number">
+              22/38
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: ../getting_started_with_git.markdown -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>git checkout - Going to a specific revision</h1></header>
+            
+            
+            <section><p>Use <em>git checkout</em> if you would like to go to a specific revision in your repositories history</p>
+<p>You can checkout a branch</p>
+<p><code>git checkout &lt;branchname&gt;</code></p>
+<p>or specify a revision using it's sha1 commit key</p>
+<p><code>git checkout &lt;sha1&gt;</code>
+<strong><em>Note</em></strong>: The sha1 key can be found by using the git log command. It's the long string of hex characters</p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="../getting_started_with_git.markdown">../getting_started_with_git.markdown</a>
+            </aside>
+            
+            <aside class="page_number">
+              23/38
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: ../getting_started_with_git.markdown -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>git merge - Combining branches</h1></header>
+            
+            
+            <section><ul>
+<li>Use <em>git merge</em> to combine the code changes from two different branches</li>
+</ul>
+<p><code>git checkout branch-1
+git merge branch-2</code></p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="../getting_started_with_git.markdown">../getting_started_with_git.markdown</a>
+            </aside>
+            
+            <aside class="page_number">
+              24/38
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: ../getting_started_with_git.markdown -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>git branch - Deleting a branch</h1></header>
+            
+            
+            <section><ul>
+<li>When the changes on a branch have been merged back in, you will want to delete the branch pointer</li>
+</ul>
+<p><code>git branch -d &lt;branchname&gt;</code>
+This will only work if the commits on this branch have been merged to another branch</p>
+<p>The more terminal option is to use the <em>-D</em> option. This will delete the branch pointer even if this branch has not been merged
+<strong><em>Danger</em></strong>: You will lose any commits on this branch that have not been merged</p>
+<p><code>git branch -D &lt;branchname&gt;</code></p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="../getting_started_with_git.markdown">../getting_started_with_git.markdown</a>
+            </aside>
+            
+            <aside class="page_number">
+              25/38
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: ../getting_started_with_git.markdown -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>git rebase</h1></header>
+            
+            
+            <section><ul>
+<li>git rebase allows you to move your branches on top of each other</li>
+<li>Makes for a more sane history when many branches are live at the same time</li>
+<li>No merge commits left in the history</li>
+<li>Outside the scope of this presentation</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="../getting_started_with_git.markdown">../getting_started_with_git.markdown</a>
+            </aside>
+            
+            <aside class="page_number">
+              26/38
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: ../getting_started_with_git.markdown -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Exercise - Branching &amp; Merging</h1></header>
+            
+            
+            <section><ul>
+<li>Create a new branch in your repository called branch1</li>
+<li>Check it out and commit some changes</li>
+<li>Create another new branch in your repository called branch2 - ensure you create it with a start point of master</li>
+<li>Check it out and commit some changes</li>
+<li>Merge the two branches</li>
+<li>Update your master (hint: merge master to the top most branch in your history)</li>
+<li>Delete your branches</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="../getting_started_with_git.markdown">../getting_started_with_git.markdown</a>
+            </aside>
+            
+            <aside class="page_number">
+              27/38
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: ../getting_started_with_git.markdown -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Working with remote repositories</h1></header>
+            
+            
+            <section><ul>
+<li>So far we have looked at managing our code locally</li>
+<li>This allows you to change your code and be safe in the knowledge that you can revert your changes if needs be</li>
+<li>It gives you a history of the changes you made and commit messages letting you know why you made those changes (provided you write good commit messages!)</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="../getting_started_with_git.markdown">../getting_started_with_git.markdown</a>
+            </aside>
+            
+            <aside class="page_number">
+              28/38
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: ../getting_started_with_git.markdown -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Working with remote repositories</h1></header>
+            
+            
+            <section><ul>
+<li>Another main benefit of version control is that it allows you to collaborate with others</li>
+<li>This is where remote repositories come in</li>
+<li>You and your co-workers can each clone a repository, work on it locally, commit your changes, and then contribute your changes back to the original repository</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="../getting_started_with_git.markdown">../getting_started_with_git.markdown</a>
+            </aside>
+            
+            <aside class="page_number">
+              29/38
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: ../getting_started_with_git.markdown -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>git clone - Cloning an Existing Repository</h1></header>
+            
+            
+            <section><p>Create your own working copy of an existing repository</p>
+<ul>
+<li>Cloning over ssh</li>
+</ul>
+<p><code>git clone &lt;username&gt;@&lt;host&gt;:/path/to/repo</code></p>
+<ul>
+<li>Cloning over http(s)</li>
+</ul>
+<p><code>git clone https://&lt;host&gt;/path/to/repo</code></p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="../getting_started_with_git.markdown">../getting_started_with_git.markdown</a>
+            </aside>
+            
+            <aside class="page_number">
+              30/38
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: ../getting_started_with_git.markdown -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Exercise - Clone a repository from github</h1></header>
+            
+            
+            <section><ul>
+<li>The github page for this presentation can be found <a href="http://github.com/brendanmaguire/???">here</a></li>
+<li>Find the url you need to clone it over http</li>
+<li>Clone it</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="../getting_started_with_git.markdown">../getting_started_with_git.markdown</a>
+            </aside>
+            
+            <aside class="page_number">
+              31/38
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: ../getting_started_with_git.markdown -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>ssh keys</h1></header>
+            
+            
+            <section><ul>
+<li>ssh keys are a way of authenicating automatically with a server running a sshd service</li>
+<li>Creating an ssh key</li>
+</ul>
+<p>`</p>
+<h1>Press enter for all defaults</h1>
+<p>ssh-keygen
+`</p>
+<ul>
+<li>Viewing the public part of your ssh key</li>
+</ul>
+<p><code>cat ~/.ssh/id_rsa.pub</code></p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="../getting_started_with_git.markdown">../getting_started_with_git.markdown</a>
+            </aside>
+            
+            <aside class="page_number">
+              32/38
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: ../getting_started_with_git.markdown -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Exercise - Create a repository on github</h1></header>
+            
+            
+            <section><ul>
+<li>Create a github account</li>
+<li>Add your ssh key in the Account Setting -&gt; SSH Keys pages</li>
+<li>Create a repository</li>
+<li>DO NOT check the box for initialising the repo. You will be pushing the repository you created in the previous exercises</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="../getting_started_with_git.markdown">../getting_started_with_git.markdown</a>
+            </aside>
+            
+            <aside class="page_number">
+              33/38
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: ../getting_started_with_git.markdown -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Pushing to a remote repository</h1></header>
+            
+            
+            <section><ul>
+<li>To push to a remote repository, you must first add an entry for the remote server</li>
+</ul>
+<p><code>git remote add origin git@github.com:&lt;username&gt;/&lt;reponame&gt;.git</code></p>
+<ul>
+<li>You can then push your master branch to the remote server</li>
+</ul>
+<p><code>git push -u origin master</code></p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="../getting_started_with_git.markdown">../getting_started_with_git.markdown</a>
+            </aside>
+            
+            <aside class="page_number">
+              34/38
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: ../getting_started_with_git.markdown -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Exercise - Push your local repo to your github repo</h1></header>
+            
+            
+            <section><ul>
+<li>Add the github repo as your remote origin</li>
+<li>Push your local commits</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="../getting_started_with_git.markdown">../getting_started_with_git.markdown</a>
+            </aside>
+            
+            <aside class="page_number">
+              35/38
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: ../getting_started_with_git.markdown -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1><a href="http://git-scm.com/docs/git-pull">git pull</a> - Pulling Updates</h1></header>
+            
+            
+            <section><ul>
+<li>Before you attempt to push your changes, you should perform a pull to ensure there are no new commits on the remote server</li>
+<li>If there are, then you should incoperate them into your local repo (and merge) before pushing</li>
+</ul>
+<p><code>git pull</code></p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="../getting_started_with_git.markdown">../getting_started_with_git.markdown</a>
+            </aside>
+            
+            <aside class="page_number">
+              36/38
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: ../getting_started_with_git.markdown -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Exercise - Collaboration on github</h1></header>
+            
+            
+            <section><ul>
+<li>Pair up with the person beside you</li>
+<li>
+<p>Add the other person as a collaborator on your github project</p>
+<ul>
+<li>In the github UI: Your project -&gt; Setting -&gt; Collorators -&gt; Add</li>
+</ul>
+</li>
+<li>
+<p>Clone their repository</p>
+</li>
+<li>Make some changes and commit</li>
+<li>
+<p>Push to their repository</p>
+</li>
+<li>
+<p>Once they've pushed to your repo, make some changes to your own local repository and commit</p>
+</li>
+<li>Try to push to your remote repository (hint: it should fail)</li>
+<li>pull the new changes your partner has made</li>
+<li>Merge and push</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="../getting_started_with_git.markdown">../getting_started_with_git.markdown</a>
+            </aside>
+            
+            <aside class="page_number">
+              37/38
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: ../getting_started_with_git.markdown -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Questions???</h1></header>
+            
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="../getting_started_with_git.markdown">../getting_started_with_git.markdown</a>
+            </aside>
+            
+            <aside class="page_number">
+              38/38
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+  <div id="toc" class="sidebar hidden">
+    <h2>Table of Contents</h2>
+    <table>
+      <caption>Table of Contents</caption>
+      
+      <tr id="toc-row-1">
+        <th><a href="#slide1">Getting Started With git</a></th>
+        <td><a href="#slide1">1</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-2">
+        <th><a href="#slide2">What is version control?</a></th>
+        <td><a href="#slide2">2</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-3">
+        <th><a href="#slide3">What is git?</a></th>
+        <td><a href="#slide3">3</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-4">
+        <th><a href="#slide4">Installing git on Linux</a></th>
+        <td><a href="#slide4">4</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-5">
+        <th><a href="#slide5">Configuring your git user profile</a></th>
+        <td><a href="#slide5">5</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-6">
+        <th><a href="#slide6">Exercise - Set up your profile using git config</a></th>
+        <td><a href="#slide6">6</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-7">
+        <th><a href="#slide7">git init - Creating a repository</a></th>
+        <td><a href="#slide7">7</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-8">
+        <th><a href="#slide8">git status - Viewing Repository Status</a></th>
+        <td><a href="#slide8">8</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-9">
+        <th><a href="#slide9">The staging area</a></th>
+        <td><a href="#slide9">9</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-10">
+        <th><a href="#slide10">git add/rm - Adding and removing files</a></th>
+        <td><a href="#slide10">10</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-11">
+        <th><a href="#slide11">git commit - Committing your changeset</a></th>
+        <td><a href="#slide11">11</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-12">
+        <th><a href="#slide12">git log - Viewing the repository history</a></th>
+        <td><a href="#slide12">12</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-13">
+        <th><a href="#slide13">Exercise - Create a repository and make a commit</a></th>
+        <td><a href="#slide13">13</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-14">
+        <th><a href="#slide14">git diff - Viewing the changes to your tracked files</a></th>
+        <td><a href="#slide14">14</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-15">
+        <th><a href="#slide15">The GUI friendly way</a></th>
+        <td><a href="#slide15">15</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-16">
+        <th><a href="#slide16">Exercise - Viewing changes to your repo</a></th>
+        <td><a href="#slide16">16</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-17">
+        <th><a href="#slide17">.gitignore - Ignoring files</a></th>
+        <td><a href="#slide17">17</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-18">
+        <th><a href="#slide18">Exercise - Add .javac files to your .gitignore</a></th>
+        <td><a href="#slide18">18</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-19">
+        <th><a href="#slide19">git checkout - Reverting changes to the working directory</a></th>
+        <td><a href="#slide19">19</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-20">
+        <th><a href="#slide20">git reset - Reverting changes in the staging area</a></th>
+        <td><a href="#slide20">20</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-21">
+        <th><a href="#slide21">git branch - Working on multiple features at once</a></th>
+        <td><a href="#slide21">21</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-22">
+        <th><a href="#slide22">git branch - Creating a branch</a></th>
+        <td><a href="#slide22">22</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-23">
+        <th><a href="#slide23">git checkout - Going to a specific revision</a></th>
+        <td><a href="#slide23">23</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-24">
+        <th><a href="#slide24">git merge - Combining branches</a></th>
+        <td><a href="#slide24">24</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-25">
+        <th><a href="#slide25">git branch - Deleting a branch</a></th>
+        <td><a href="#slide25">25</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-26">
+        <th><a href="#slide26">git rebase</a></th>
+        <td><a href="#slide26">26</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-27">
+        <th><a href="#slide27">Exercise - Branching &amp; Merging</a></th>
+        <td><a href="#slide27">27</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-28">
+        <th><a href="#slide28">Working with remote repositories</a></th>
+        <td><a href="#slide28">28</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-29">
+        <th><a href="#slide29">Working with remote repositories</a></th>
+        <td><a href="#slide29">29</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-30">
+        <th><a href="#slide30">git clone - Cloning an Existing Repository</a></th>
+        <td><a href="#slide30">30</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-31">
+        <th><a href="#slide31">Exercise - Clone a repository from github</a></th>
+        <td><a href="#slide31">31</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-32">
+        <th><a href="#slide32">ssh keys</a></th>
+        <td><a href="#slide32">32</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-33">
+        <th><a href="#slide33">Exercise - Create a repository on github</a></th>
+        <td><a href="#slide33">33</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-34">
+        <th><a href="#slide34">Pushing to a remote repository</a></th>
+        <td><a href="#slide34">34</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-35">
+        <th><a href="#slide35">Exercise - Push your local repo to your github repo</a></th>
+        <td><a href="#slide35">35</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-36">
+        <th><a href="#slide36"><a href="http://git-scm.com/docs/git-pull">git pull</a> - Pulling Updates</a></th>
+        <td><a href="#slide36">36</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-37">
+        <th><a href="#slide37">Exercise - Collaboration on github</a></th>
+        <td><a href="#slide37">37</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-38">
+        <th><a href="#slide38">Questions???</a></th>
+        <td><a href="#slide38">38</a></td>
+      </tr>
+      
+      
+    </table>
+  </div>
+  
+  <div id="help" class="sidebar hidden">
+    <h2>Help</h2>
+    <table>
+      <caption>Help</caption>
+      <tr>
+        <th>Table of Contents</th>
+        <td>t</td>
+      </tr>
+      <tr>
+        <th>Exposé</th>
+        <td>ESC</td>
+      </tr>
+      <tr>
+        <th>Full screen slides</th>
+        <td>e</td>
+      </tr>
+      <tr>
+        <th>Presenter View</th>
+        <td>p</td>
+      </tr>
+      <tr>
+        <th>Source Files</th>
+        <td>s</td>
+      </tr>
+      <tr>
+        <th>Slide Numbers</th>
+        <td>n</td>
+      </tr>
+      <tr>
+        <th>Toggle screen blanking</th>
+        <td>b</td>
+      </tr>
+      <tr>
+        <th>Show/hide slide context</th>
+        <td>c</td>
+      </tr>
+      <tr>
+        <th>Notes</th>
+        <td>2</td>
+      </tr>
+      <tr>
+        <th>Help</th>
+        <td>h</td>
+      </tr>
+    </table>
+  </div>
+  <script>main()</script>
+</body>
+</html>
