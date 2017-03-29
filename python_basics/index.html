@@ -1,0 +1,2807 @@
+<!DOCTYPE html>
+<!--
+  Copyright 2010 Google Inc.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+
+  Original slides: Marcin Wichary (mwichary@google.com)
+  Modifications: Ernest Delgado (ernestd@google.com)
+                 Alex Russell (slightlyoff@chromium.org)
+
+  landslide modifications: Adam Zapletal (adamzap@gmail.com)
+                           Nicolas Perriault (nperriault@gmail.com)
+-->
+<html>
+<head><link rel="stylesheet" media="print" href="theme/css/print.css"> <link rel="stylesheet" media="screen" href="theme/css/screen.css"> <script type="text/javascript" src="theme/js/slides.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Python Basics</title>
+    <!-- Styles -->
+    
+    
+    
+    <!-- /Styles -->
+    <!-- Javascripts -->
+    
+    
+    
+    
+    <!-- /Javascripts -->
+</head>
+<body>
+  <div id="blank"></div>
+  <div class="presentation">
+    <div id="current_presenter_notes">
+      <div id="presenter_note"></div>
+    </div>
+    <div class="slides">
+      
+      <!-- slide source: python_basics.markdown -->
+      <div class="slide-wrapper">
+        <div class="slide slide-1">
+          <div class="inner">
+            
+            <header><h1>Python Basics</h1></header>
+            
+            
+            <section><p><img alt="Python" src="images/python_icon.png" /></p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="python_basics.markdown">python_basics.markdown</a>
+            </aside>
+            
+            <aside class="page_number">
+              1/54
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: python_basics.markdown -->
+      <div class="slide-wrapper">
+        <div class="slide slide-2">
+          <div class="inner">
+            
+            <header><h1>What is Python?</h1></header>
+            
+            
+            <section><ul>
+<li>Scripting language</li>
+<li>Object Orientated</li>
+<li>1.0 released Jan, 1994</li>
+<li>3.0 released Dec, 2008</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="python_basics.markdown">python_basics.markdown</a>
+            </aside>
+            
+            <aside class="page_number">
+              2/54
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: python_basics.markdown -->
+      <div class="slide-wrapper">
+        <div class="slide slide-3">
+          <div class="inner">
+            
+            <header><h1>Differences to Java</h1></header>
+            
+            
+            <section><ul>
+<li>Dynamic Typing</li>
+<li>Indentation</li>
+<li>Slower at runtime</li>
+<li>Faster to develop</li>
+<li>Batteries included</li>
+<li>Easier to learn*</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="python_basics.markdown">python_basics.markdown</a>
+            </aside>
+            
+            <aside class="page_number">
+              3/54
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: python_basics.markdown -->
+      <div class="slide-wrapper">
+        <div class="slide slide-4">
+          <div class="inner">
+            
+            <header><h1>Python on Linux</h1></header>
+            
+            
+            <section><ul>
+<li>Usually preinstalled</li>
+<li>Will use Python3 in this course</li>
+<li>Run a Python:
+<code>python3 program.py</code></li>
+<li>Can install <a href="http://ipython.readthedocs.io/en/stable/">iPython</a> for a nicer REPL</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="python_basics.markdown">python_basics.markdown</a>
+            </aside>
+            
+            <aside class="page_number">
+              4/54
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: python_basics.markdown -->
+      <div class="slide-wrapper">
+        <div class="slide slide-5">
+          <div class="inner">
+            
+            <header><h1>Data Types</h1></header>
+            
+            
+            <section><ul>
+<li>Boolean - <code>bool</code></li>
+<li>Numeric - <code>int</code> <code>float</code> <code>complex</code></li>
+<li>Sequences - <code>str</code> <code>list</code>* <code>tuple</code></li>
+<li>Sets - <code>set</code>*</li>
+<li>Maps - <code>dict</code>*</li>
+<li>None - null object</li>
+</ul>
+<p>* - mutable data types</p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="python_basics.markdown">python_basics.markdown</a>
+            </aside>
+            
+            <aside class="page_number">
+              5/54
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: python_basics.markdown -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-6">
+          <div class="inner">
+            
+            <header><h1>Strings</h1></header>
+            
+            
+            <section><ul>
+<li>String literals can be written in a variety of ways<ul>
+<li>Singe quotes - <code>'allows embedded "double" quotes'</code></li>
+<li>Double quotes - <code>"allows embedded 'single' quotes"</code></li>
+<li>Triple quotes - <code>'''Can span multiple lines'''</code></li>
+</ul>
+</li>
+<li>Strings are immutable</li>
+<li>Concatenate strings using <code>+</code></li>
+</ul>
+<!-- -->
+
+<div class="highlight"><pre><span></span><span class="s1">&#39;hello &#39;</span> <span class="o">+</span> <span class="s1">&#39;world&#39;</span>
+</pre></div>
+</section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="python_basics.markdown">python_basics.markdown</a>
+            </aside>
+            
+            <aside class="page_number">
+              6/54
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: python_basics.markdown -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-7">
+          <div class="inner">
+            
+            <header><h1>Input/Output</h1></header>
+            
+            
+            <section><ul>
+<li>Input using the <code>input(prompt)</code> function</li>
+<li>Output using the <code>print(value)</code> function</li>
+</ul>
+<!-- -->
+
+<div class="highlight"><pre><span></span><span class="n">username</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter your username here: &#39;</span><span class="p">)</span>
+<span class="n">balance</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter the balance here: &#39;</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;Welcome {}, your balance is {}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">username</span><span class="p">,</span> <span class="n">balance</span><span class="p">))</span>
+</pre></div>
+</section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="python_basics.markdown">python_basics.markdown</a>
+            </aside>
+            
+            <aside class="page_number">
+              7/54
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: python_basics.markdown -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-8">
+          <div class="inner">
+            
+            <header><h1>String Interpolation</h1></header>
+            
+            
+            <section><div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="s1">&#39;Hello {}, my name is {}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;world&#39;</span><span class="p">,</span> <span class="s1">&#39;Tom&#39;</span><span class="p">))</span>
+
+<span class="c1"># Specify named arguments</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;Welcome {user}, today is {day}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">user</span><span class="o">=</span><span class="s1">&#39;Mary&#39;</span><span class="p">,</span> <span class="n">day</span><span class="o">=</span><span class="s1">&#39;Wednesday&#39;</span><span class="p">))</span>
+
+<span class="c1"># Specify positional arguments</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;{2} {0} {1} {2}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">))</span>
+
+<span class="c1"># Formatting floats to 2 decimal places</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;{:.2f}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mf">99.23456</span><span class="p">))</span>
+</pre></div>
+
+<!-- -->
+
+<pre><code>'Hello world, my name is Tom'
+'Welcome Mary, today is Wednesday'
+'c a b c'
+'99.23'
+</code></pre></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="python_basics.markdown">python_basics.markdown</a>
+            </aside>
+            
+            <aside class="page_number">
+              8/54
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: python_basics.markdown -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-9">
+          <div class="inner">
+            
+            <header><h1>String methods</h1></header>
+            
+            
+            <section><div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="s1">&#39;programming in python&#39;</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">))</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;programming in python&#39;</span><span class="o">.</span><span class="n">title</span><span class="p">())</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;programming was fun&#39;</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;was&#39;</span><span class="p">,</span> <span class="s1">&#39;is&#39;</span><span class="p">))</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;abc def&#39;</span><span class="o">.</span><span class="n">upper</span><span class="p">())</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;abc&#39;</span> <span class="o">*</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+
+<!-- -->
+
+<pre><code>['programming', 'in', 'python']
+'Programming in Python'
+'programming is fun'
+'ABC DEF'
+'abcabc'
+</code></pre></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="python_basics.markdown">python_basics.markdown</a>
+            </aside>
+            
+            <aside class="page_number">
+              9/54
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: python_basics.markdown -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-10">
+          <div class="inner">
+            
+            <header><h1>Integers &amp; Floats</h1></header>
+            
+            
+            <section><ul>
+<li>Can cast objects to other types</li>
+</ul>
+<!-- -->
+
+<div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;17.89&#39;</span>
+
+<span class="c1"># Cast the string to a float</span>
+<span class="n">f</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+
+<span class="c1"># Cast the float to an int (rounds down)</span>
+<span class="n">i</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</pre></div>
+
+<!-- -->
+
+<pre><code>17.89
+17
+</code></pre></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="python_basics.markdown">python_basics.markdown</a>
+            </aside>
+            
+            <aside class="page_number">
+              10/54
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: python_basics.markdown -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-11">
+          <div class="inner">
+            
+            <header><h1>Casting - ValueError</h1></header>
+            
+            
+            <section><ul>
+<li>A ValueError exception will be raised if the object cannot be cast to the specified type</li>
+</ul>
+<!-- -->
+
+<div class="highlight"><pre><span></span><span class="nb">int</span><span class="p">(</span><span class="s1">&#39;17.89&#39;</span><span class="p">)</span>
+<span class="nb">float</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)</span>
+</pre></div>
+
+<!-- -->
+
+<pre><code>ValueError: invalid literal for int() with base 10: '17.89'
+ValueError: could not convert string to float: 'a'
+</code></pre></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="python_basics.markdown">python_basics.markdown</a>
+            </aside>
+            
+            <aside class="page_number">
+              11/54
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: python_basics.markdown -->
+      <div class="slide-wrapper">
+        <div class="slide slide-12">
+          <div class="inner">
+            
+            <header><h1>Math Functions</h1></header>
+            
+            
+            <section><ul>
+<li><code>+</code> Addition</li>
+<li><code>-</code> Subtraction</li>
+<li><code>*</code> Multiplication</li>
+<li><code>/</code> Division</li>
+<li><code>%</code> Modulo</li>
+<li><code>**</code> Power of</li>
+</ul>
+<p>And much more in the <a href="https://docs.python.org/3.2/library/math.html#module-math">math standard library</a></p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="python_basics.markdown">python_basics.markdown</a>
+            </aside>
+            
+            <aside class="page_number">
+              12/54
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: python_basics.markdown -->
+      <div class="slide-wrapper">
+        <div class="slide slide-13">
+          <div class="inner">
+            
+            <header><h1>Exercise - Math Program</h1></header>
+            
+            
+            <section><ul>
+<li>Write a program that:<ul>
+<li>Takes two floats from stdin input</li>
+<li>Prints the following results for the two numbers:<ul>
+<li>addition</li>
+<li>subtraction</li>
+<li>multiplication</li>
+<li>division</li>
+<li>modulo</li>
+<li>power of</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>Sample input &amp; output on next slide</p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="python_basics.markdown">python_basics.markdown</a>
+            </aside>
+            
+            <aside class="page_number">
+              13/54
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: python_basics.markdown -->
+      <div class="slide-wrapper">
+        <div class="slide slide-14">
+          <div class="inner">
+            
+            <header><h1>Exercise - Math Program</h1></header>
+            
+            
+            <section><ul>
+<li>Sample Input</li>
+</ul>
+<!-- -->
+
+<pre><code>8
+4
+</code></pre>
+<ul>
+<li>Sample Output</li>
+</ul>
+<!-- -->
+
+<pre><code>8.0 plus 4.0 equals 12.0
+8.0 minus 4.0 equals 4.0.0
+8.0 multiplied by 4.0 equals 32.0
+8.0 divided by 4.0 equals 2.0
+8.0 modulo 4.0 equals 0.0
+8.0 to the power of 4.0 equals 4096.0
+</code></pre></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="python_basics.markdown">python_basics.markdown</a>
+            </aside>
+            
+            <aside class="page_number">
+              14/54
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: python_basics.markdown -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-15">
+          <div class="inner">
+            
+            <header><h1>Boolean Expressions</h1></header>
+            
+            
+            <section><ul>
+<li>Two boolean types - False &amp; True</li>
+<li>Can be used with boolean operators</li>
+<li>All of these expressions evaluate to <code>True</code></li>
+</ul>
+<!-- -->
+
+<div class="highlight"><pre><span></span><span class="bp">True</span> <span class="ow">and</span> <span class="bp">True</span>
+<span class="bp">False</span> <span class="ow">or</span> <span class="bp">True</span>
+<span class="ow">not</span> <span class="bp">False</span>
+</pre></div>
+</section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="python_basics.markdown">python_basics.markdown</a>
+            </aside>
+            
+            <aside class="page_number">
+              15/54
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: python_basics.markdown -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-16">
+          <div class="inner">
+            
+            <header><h1>Comparison Operations</h1></header>
+            
+            
+            <section><ul>
+<li>Compare the values of two object</li>
+<li>The objects do not need to have the same type, but they must be orderable against each other</li>
+</ul>
+<!-- -->
+
+<div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">&lt;</span> <span class="n">y</span>
+<span class="n">x</span> <span class="o">&gt;</span> <span class="n">y</span>
+<span class="n">x</span> <span class="o">==</span> <span class="n">y</span>
+<span class="n">x</span> <span class="o">&gt;=</span> <span class="n">y</span>
+<span class="n">x</span> <span class="o">&lt;=</span> <span class="n">y</span>
+<span class="n">x</span> <span class="o">!=</span> <span class="n">y</span>
+
+<span class="c1"># Compare if two variables point to the same object</span>
+<span class="n">x</span> <span class="ow">is</span> <span class="n">y</span>
+<span class="n">x</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">y</span>
+
+<span class="c1"># Determine if a value is in a collection</span>
+<span class="n">x</span> <span class="ow">in</span> <span class="n">collection</span>
+<span class="n">x</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">collection</span>
+</pre></div>
+</section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="python_basics.markdown">python_basics.markdown</a>
+            </aside>
+            
+            <aside class="page_number">
+              16/54
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: python_basics.markdown -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-17">
+          <div class="inner">
+            
+            <header><h1>If / Else Statements</h1></header>
+            
+            
+            <section><ul>
+<li><code>if</code> statements do not require the condition be surrounded by brackets</li>
+<li>The <code>elif</code> and <code>else</code> are optional. Can just have a single <code>if</code> condition and statement</li>
+</ul>
+<!-- -->
+
+<div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">3</span>
+
+<span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Small x&#39;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">4</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Medium x&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Large x&#39;</span><span class="p">)</span>
+</pre></div>
+
+<!-- -->
+
+<pre><code>Medium x
+</code></pre></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="python_basics.markdown">python_basics.markdown</a>
+            </aside>
+            
+            <aside class="page_number">
+              17/54
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: python_basics.markdown -->
+      <div class="slide-wrapper">
+        <div class="slide slide-18">
+          <div class="inner">
+            
+            <header><h1>Boolean Expressions - Truthy &amp; Falsey</h1></header>
+            
+            
+            <section><ul>
+<li>Other types can be used in a boolean context</li>
+<li>The following values are considered False:<ul>
+<li><code>0</code></li>
+<li><code>None</code></li>
+<li>Empty strings - <code>""</code></li>
+<li>Empty collections - <code>{}, [], ()</code></li>
+</ul>
+</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="python_basics.markdown">python_basics.markdown</a>
+            </aside>
+            
+            <aside class="page_number">
+              18/54
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: python_basics.markdown -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-19">
+          <div class="inner">
+            
+            <header><h1>Boolean Expressions - Truthy &amp; Falsey</h1></header>
+            
+            
+            <section><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;my string&#39;</span>
+<span class="k">if</span> <span class="n">s</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;this string is not empty: {}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">s</span><span class="p">))</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;this string is empty&#39;</span><span class="p">)</span>
+</pre></div>
+
+<!-- -->
+
+<pre><code>this string is not empty: my string
+</code></pre></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="python_basics.markdown">python_basics.markdown</a>
+            </aside>
+            
+            <aside class="page_number">
+              19/54
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: python_basics.markdown -->
+      <div class="slide-wrapper">
+        <div class="slide slide-20">
+          <div class="inner">
+            
+            <header><h1>Exercise - Logical Operations</h1></header>
+            
+            
+            <section><ul>
+<li>Write a program to take a word from a user</li>
+<li>If the word doesn't start with "t" or "T" then output a statement that it must</li>
+<li>If the word is shorter than 3 letters then output that it is too short</li>
+<li>If the word is longer than 6 letters then output that it is too long</li>
+<li>If all conditions are satisfied, then output that this is the case</li>
+</ul>
+<p>Sample input &amp; output on next slide</p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="python_basics.markdown">python_basics.markdown</a>
+            </aside>
+            
+            <aside class="page_number">
+              20/54
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: python_basics.markdown -->
+      <div class="slide-wrapper">
+        <div class="slide slide-21">
+          <div class="inner">
+            
+            <header><h1>Exercise - Logical Operations</h1></header>
+            
+            
+            <section><p><strong><em>Note</em></strong>: Input and output shown in the same code blocks below</p>
+<!-- -->
+
+<pre><code>carrot
+The word "carrot" does not start with "t"
+</code></pre>
+<!-- -->
+
+<pre><code>to
+The word "to" is too short
+</code></pre>
+<!-- -->
+
+<pre><code>telephone
+The word "telephone" is too long
+</code></pre>
+<!-- -->
+
+<pre><code>tulip
+The word "tulip" satisfies this program!
+</code></pre>
+<!-- -->
+
+<pre><code>Tulip
+The word "Tulip" satisfies this program!
+</code></pre></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="python_basics.markdown">python_basics.markdown</a>
+            </aside>
+            
+            <aside class="page_number">
+              21/54
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: python_basics.markdown -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-22">
+          <div class="inner">
+            
+            <header><h1>While Loops</h1></header>
+            
+            
+            <section><ul>
+<li>Continues to loop until the condition is <code>False</code></li>
+</ul>
+<!-- -->
+
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">time</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;Countdown...&#39;</span><span class="p">)</span>
+
+<span class="n">time_left</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="k">while</span> <span class="n">time_left</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;{}..&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">time_left</span><span class="p">))</span>
+    <span class="n">time_left</span> <span class="o">=</span> <span class="n">time_left</span> <span class="o">-</span> <span class="mi">1</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;Take off!!&#39;</span><span class="p">)</span>
+</pre></div>
+
+<!-- -->
+
+<pre><code>Countdown...
+3...
+2...
+1...
+Take off!!
+</code></pre></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="python_basics.markdown">python_basics.markdown</a>
+            </aside>
+            
+            <aside class="page_number">
+              22/54
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: python_basics.markdown -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-23">
+          <div class="inner">
+            
+            <header><h1>For Loops</h1></header>
+            
+            
+            <section><ul>
+<li><code>for</code> loops are used to iterate through a collection</li>
+<li>Declare the variable to hold the value of the element during each iteration</li>
+</ul>
+<!-- -->
+
+<div class="highlight"><pre><span></span><span class="c1"># Prints all even numbers in the list</span>
+<span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">8</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">10</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">number</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">number</span><span class="p">)</span>
+</pre></div>
+
+<!-- -->
+
+<pre><code>8
+2
+10
+</code></pre></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="python_basics.markdown">python_basics.markdown</a>
+            </aside>
+            
+            <aside class="page_number">
+              23/54
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: python_basics.markdown -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-24">
+          <div class="inner">
+            
+            <header><h1>For Loops</h1></header>
+            
+            
+            <section><ul>
+<li><code>for</code> loops can be used with any iterable type, including strings</li>
+</ul>
+<!-- -->
+
+<div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">letter</span> <span class="ow">in</span> <span class="s2">&quot;Hello World&quot;</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">letter</span><span class="o">.</span><span class="n">isupper</span><span class="p">():</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">letter</span><span class="p">)</span>
+</pre></div>
+
+<!-- -->
+
+<pre><code>H
+W
+</code></pre></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="python_basics.markdown">python_basics.markdown</a>
+            </aside>
+            
+            <aside class="page_number">
+              24/54
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: python_basics.markdown -->
+      <div class="slide-wrapper">
+        <div class="slide slide-25">
+          <div class="inner">
+            
+            <header><h1>Iterables</h1></header>
+            
+            
+            <section><ul>
+<li>Iterables are types that contain zero or more elements that can be iterated across</li>
+<li>Here are a subset of the most commonly used iterable types<ul>
+<li>Sequence Types<ul>
+<li><code>list</code></li>
+<li><code>str</code></li>
+<li><code>tuple</code></li>
+</ul>
+</li>
+<li>Non-sequence Types<ul>
+<li><code>dict</code></li>
+<li><code>set</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="python_basics.markdown">python_basics.markdown</a>
+            </aside>
+            
+            <aside class="page_number">
+              25/54
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: python_basics.markdown -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-26">
+          <div class="inner">
+            
+            <header><h1>Iterable Functions</h1></header>
+            
+            
+            <section><ul>
+<li><code>len</code> - Get the size of the collection</li>
+<li><code>in</code> - Determine if an element is in the collection</li>
+</ul>
+<!-- -->
+
+<div class="highlight"><pre><span></span><span class="n">vowels</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">,</span> <span class="s1">&#39;i&#39;</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="s1">&#39;u&#39;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;There are {} vowels&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">vowels</span><span class="p">)))</span>
+
+<span class="n">sentence</span> <span class="o">=</span> <span class="s1">&#39;I eat apples in April&#39;</span> 
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;The vowels in &quot;{}&quot; are:&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sentence</span><span class="p">),</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">letter</span> <span class="ow">in</span> <span class="n">sentence</span><span class="p">:</span>
+    <span class="c1"># If the letter is in the vowel tuple</span>
+    <span class="k">if</span> <span class="n">letter</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">in</span> <span class="n">vowels</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">letter</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+</pre></div>
+
+<!-- -->
+
+<pre><code>There are 5 vowels
+The vowels in "I eat apples in April" are: I e a a e i A i
+</code></pre>
+<p><strong><em>Note</em></strong>: The <code>end=' '</code> parameter to print specifies that instead of printing a new line, just print a space</p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="python_basics.markdown">python_basics.markdown</a>
+            </aside>
+            
+            <aside class="page_number">
+              26/54
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: python_basics.markdown -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-27">
+          <div class="inner">
+            
+            <header><h1>Iterable Functions</h1></header>
+            
+            
+            <section><ul>
+<li><code>for</code> and <code>in</code> work on the key in dicts</li>
+</ul>
+<!-- -->
+
+<div class="highlight"><pre><span></span><span class="n">sample_words</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="s1">&#39;apple&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">:</span> <span class="s1">&#39;ball&#39;</span><span class="p">}</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;a&#39;</span> <span class="ow">in</span> <span class="n">sample_words</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;ball&#39;</span> <span class="ow">in</span> <span class="n">sample_words</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">letter</span> <span class="ow">in</span> <span class="n">sample_words</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;There is a word for &quot;{}&quot;&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">letter</span><span class="p">))</span>
+</pre></div>
+
+<!-- -->
+
+<pre><code>True
+False
+There is a word for "a"
+There is a word for "b"
+</code></pre></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="python_basics.markdown">python_basics.markdown</a>
+            </aside>
+            
+            <aside class="page_number">
+              27/54
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: python_basics.markdown -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-28">
+          <div class="inner">
+            
+            <header><h1>Iterable Functions</h1></header>
+            
+            
+            <section><ul>
+<li>Use the <code>items()</code> method to get both key and value during the iteration</li>
+</ul>
+<!-- -->
+
+<div class="highlight"><pre><span></span><span class="n">sample_words</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="s1">&#39;apple&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">:</span> <span class="s1">&#39;ball&#39;</span><span class="p">}</span>
+
+<span class="k">for</span> <span class="n">letter</span><span class="p">,</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">sample_words</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;A sample word for &quot;{}&quot; is &quot;{}&quot;&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">letter</span><span class="p">,</span> <span class="n">word</span><span class="p">))</span>
+</pre></div>
+
+<!-- -->
+
+<pre><code>A sample word for "a" is "apple"
+A sample word for "b" is "ball"
+</code></pre></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="python_basics.markdown">python_basics.markdown</a>
+            </aside>
+            
+            <aside class="page_number">
+              28/54
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: python_basics.markdown -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-29">
+          <div class="inner">
+            
+            <header><h1>Range</h1></header>
+            
+            
+            <section><ul>
+<li>The <code>range</code> object can be used to simulate a list of numbers</li>
+</ul>
+<!-- -->
+
+<div class="highlight"><pre><span></span><span class="c1"># From 3 to 10</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">10</span><span class="p">)))</span>
+
+<span class="c1"># From 0 to 10, in steps of 2</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">2</span><span class="p">)))</span>
+
+<span class="c1"># From 5 to 0, in steps of -1</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">)))</span>
+</pre></div>
+
+<!-- -->
+
+<pre><code>[3, 4, 5, 6, 7, 8, 9]
+[0, 2, 4, 6, 8]
+[5, 4, 3, 2, 1]
+</code></pre></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="python_basics.markdown">python_basics.markdown</a>
+            </aside>
+            
+            <aside class="page_number">
+              29/54
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: python_basics.markdown -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-30">
+          <div class="inner">
+            
+            <header><h1>For Loops with Range</h1></header>
+            
+            
+            <section><!-- -->
+
+<div class="highlight"><pre><span></span><span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+    <span class="n">total</span> <span class="o">+=</span> <span class="n">i</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">total</span><span class="p">)</span>
+</pre></div>
+
+<!-- -->
+
+<pre><code>10
+</code></pre></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="python_basics.markdown">python_basics.markdown</a>
+            </aside>
+            
+            <aside class="page_number">
+              30/54
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: python_basics.markdown -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-31">
+          <div class="inner">
+            
+            <header><h1>Loops - Control Flow</h1></header>
+            
+            
+            <section><ul>
+<li>Use <code>continue</code> &amp; <code>break</code> to change the natural flow of a loop</li>
+<li><code>continue</code> skips the rest of the current iteration and starts the next</li>
+<li><code>break</code> terminates the loop</li>
+</ul>
+<!-- -->
+
+<div class="highlight"><pre><span></span><span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+    <span class="n">should_quit</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Quit: [Y/n] &#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">should_quit</span> <span class="o">==</span> <span class="s1">&#39;Y&#39;</span><span class="p">:</span>
+        <span class="k">break</span>
+
+    <span class="n">user</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Username: &#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">user</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">continue</span>
+
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Welcome, {}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">user</span><span class="p">))</span>
+</pre></div>
+</section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="python_basics.markdown">python_basics.markdown</a>
+            </aside>
+            
+            <aside class="page_number">
+              31/54
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: python_basics.markdown -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-32">
+          <div class="inner">
+            
+            <header><h1>Mutable Collections - Lists</h1></header>
+            
+            
+            <section><ul>
+<li>Create lists using the <code>[]</code> or <code>list</code> keywords</li>
+</ul>
+<!-- -->
+
+<div class="highlight"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">6</span><span class="p">]</span>
+
+<span class="c1"># Append 7 to the end of the list</span>
+<span class="n">l</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+
+<span class="c1"># Insert 77 at the start of the list</span>
+<span class="n">l</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">77</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
+</pre></div>
+
+<!-- -->
+
+<pre><code>[77, 2, 4, 6, 7]
+</code></pre></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="python_basics.markdown">python_basics.markdown</a>
+            </aside>
+            
+            <aside class="page_number">
+              32/54
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: python_basics.markdown -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-33">
+          <div class="inner">
+            
+            <header><h1>Mutable Collections - Lists</h1></header>
+            
+            
+            <section><ul>
+<li>Access an element of a list using the index number - 0th indexed</li>
+<li>Many useful methods on lists. <code>dir(list)</code> for a full listing</li>
+</ul>
+<!-- -->
+
+<div class="highlight"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">9</span><span class="p">]</span>
+
+<span class="n">l</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;Sorted: {}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">l</span><span class="p">))</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;The 3rd element in the list is {}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">l</span><span class="p">[</span><span class="mi">2</span><span class="p">]))</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;There are {} 1&#39;s in the list&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">l</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="mi">1</span><span class="p">)))</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;The min and max are {} and {}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="n">l</span><span class="p">),</span> <span class="nb">max</span><span class="p">(</span><span class="n">l</span><span class="p">)))</span>
+</pre></div>
+
+<!-- -->
+
+<pre><code>Sorted: [1, 1, 1, 2, 2, 8, 9, 9]
+The 3rd element in the list is 1
+There are 3 1's in the list
+The min and max are 1 and 9
+</code></pre></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="python_basics.markdown">python_basics.markdown</a>
+            </aside>
+            
+            <aside class="page_number">
+              33/54
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: python_basics.markdown -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-34">
+          <div class="inner">
+            
+            <header><h1>Mutable Collections - Sets</h1></header>
+            
+            
+            <section><ul>
+<li>Create sets using the <code>{}</code> or <code>set</code> keywords</li>
+<li>A set will only store each value once</li>
+</ul>
+<!-- -->
+
+<div class="highlight"><pre><span></span><span class="c1"># 3 will only be referenced once</span>
+<span class="n">s</span> <span class="o">=</span> <span class="p">{</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">}</span>
+
+<span class="n">s</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">s</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+</pre></div>
+
+<!-- -->
+
+<pre><code>{2, 3, 4}
+</code></pre></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="python_basics.markdown">python_basics.markdown</a>
+            </aside>
+            
+            <aside class="page_number">
+              34/54
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: python_basics.markdown -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-35">
+          <div class="inner">
+            
+            <header><h1>Mutable Collections - Dict</h1></header>
+            
+            
+            <section><ul>
+<li>Create dicts using the <code>{}</code> or <code>dict</code> keywords</li>
+<li>Overwrite and add entries using the <code>d[key]</code> syntax</li>
+<li>Delete entries by using the <code>del d[key]</code> syntax</li>
+</ul>
+<!-- -->
+
+<div class="highlight"><pre><span></span><span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;foo&#39;</span><span class="p">:</span> <span class="s1">&#39;bar&#39;</span><span class="p">}</span>
+
+<span class="n">d</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;hello&#39;</span>
+<span class="k">del</span> <span class="n">d</span><span class="p">[</span><span class="s1">&#39;foo&#39;</span><span class="p">]</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+</pre></div>
+
+<!-- -->
+
+<pre><code>{1: 'hello'}
+</code></pre></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="python_basics.markdown">python_basics.markdown</a>
+            </aside>
+            
+            <aside class="page_number">
+              35/54
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: python_basics.markdown -->
+      <div class="slide-wrapper">
+        <div class="slide slide-36">
+          <div class="inner">
+            
+            <header><h1>Exercise - Collections</h1></header>
+            
+            
+            <section><ul>
+<li>Write a program that takes a whitespace separated list of words</li>
+<li>Split the input string using the <code>str.split()</code> method</li>
+<li>Output a dict with integer keys and corresponding lists with all words of that length</li>
+<li>Sample Input</li>
+</ul>
+<!-- -->
+
+<pre><code>apple car movie hair more
+</code></pre>
+<ul>
+<li>Sample Output</li>
+</ul>
+<!-- -->
+
+<pre><code>{3: ['car'], 4: ['hair', 'more'], 5: ['apple', 'movie']}
+</code></pre></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="python_basics.markdown">python_basics.markdown</a>
+            </aside>
+            
+            <aside class="page_number">
+              36/54
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: python_basics.markdown -->
+      <div class="slide-wrapper">
+        <div class="slide slide-37">
+          <div class="inner">
+            
+            <header><h1>For Comprehensions</h1></header>
+            
+            
+            <section><ul>
+<li>The <code>for</code> keyword can also be used in the generation of collections:<ul>
+<li>lists</li>
+<li>sets</li>
+<li>dicts</li>
+<li>generators</li>
+</ul>
+</li>
+<li>This is the idiomatic way to <strong>transform / filter</strong> collections in Python</li>
+<li>Use in combination with if statements to filter the collection</li>
+<li>Use in combination with functions to transform the collection</li>
+</ul>
+<p><strong><em>Note</em></strong>: If you do not care about the results of the for loop then you would still use a regular
+for loop rather than a for comprehension</p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="python_basics.markdown">python_basics.markdown</a>
+            </aside>
+            
+            <aside class="page_number">
+              37/54
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: python_basics.markdown -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-38">
+          <div class="inner">
+            
+            <header><h1>For Comprehensions - Lists</h1></header>
+            
+            
+            <section><div class="highlight"><pre><span></span><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">7</span><span class="p">]</span>
+
+<span class="c1"># Transform - Get the squares</span>
+<span class="n">squares</span> <span class="o">=</span> <span class="p">[</span><span class="n">v</span> <span class="o">*</span> <span class="n">v</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">]</span>
+
+<span class="c1"># Filter - Only keep the even numbers</span>
+<span class="n">evens</span> <span class="o">=</span> <span class="p">[</span><span class="n">v</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">numbers</span> <span class="k">if</span> <span class="n">v</span> <span class="o">%</span> <span class="mi">2</span><span class="p">]</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">squares</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">evens</span><span class="p">)</span>
+</pre></div>
+
+<!-- -->
+
+<pre><code>[9, 81, 4, 1, 100, 16, 4, 49]
+[3, 9, 1, 7]
+</code></pre></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="python_basics.markdown">python_basics.markdown</a>
+            </aside>
+            
+            <aside class="page_number">
+              38/54
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: python_basics.markdown -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-39">
+          <div class="inner">
+            
+            <header><h1>For Comprehensions - Dicts</h1></header>
+            
+            
+            <section><div class="highlight"><pre><span></span><span class="n">words</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;sign&#39;</span><span class="p">,</span> <span class="s1">&#39;apple&#39;</span><span class="p">,</span> <span class="s1">&#39;baloon&#39;</span><span class="p">,</span> <span class="s1">&#39;dog&#39;</span><span class="p">,</span> <span class="s1">&#39;ball&#39;</span><span class="p">,</span> <span class="s1">&#39;sweet&#39;</span><span class="p">]</span>
+
+<span class="c1"># Create a map with a letter as key and the last word in the list</span>
+<span class="c1"># starting with that letter</span>
+<span class="n">last_found</span> <span class="o">=</span> <span class="p">{</span> <span class="n">w</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span> <span class="n">w</span> <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">words</span> <span class="p">}</span>
+<span class="k">print</span><span class="p">(</span><span class="n">last_found</span><span class="p">)</span>
+</pre></div>
+
+<!-- -->
+
+<pre><code>{'a': 'apple', 'b': 'ball', 'd': 'dog', 's': 'sweet'}
+</code></pre></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="python_basics.markdown">python_basics.markdown</a>
+            </aside>
+            
+            <aside class="page_number">
+              39/54
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: python_basics.markdown -->
+      <div class="slide-wrapper">
+        <div class="slide slide-40">
+          <div class="inner">
+            
+            <header><h1>Dynamic vs Static Typing</h1></header>
+            
+            
+            <section><ul>
+<li>Staticically typed lanaguages<ul>
+<li>Compile time type checking</li>
+<li>Variables have a declared type</li>
+</ul>
+</li>
+<li>Dynamically typed languages<ul>
+<li>Run-time type checking</li>
+<li>Variable is just a name</li>
+</ul>
+</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="python_basics.markdown">python_basics.markdown</a>
+            </aside>
+            
+            <aside class="page_number">
+              40/54
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: python_basics.markdown -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-41">
+          <div class="inner">
+            
+            <header><h1>Dynamic Typing</h1></header>
+            
+            
+            <section><div class="highlight"><pre><span></span><span class="c1"># Variables are not constrained to the type they can point to</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;hello world&#39;</span>
+<span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+
+<!-- -->
+
+<pre><code>1
+hello world
+</code></pre></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="python_basics.markdown">python_basics.markdown</a>
+            </aside>
+            
+            <aside class="page_number">
+              41/54
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: python_basics.markdown -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-42">
+          <div class="inner">
+            
+            <header><h1>Everything is an Object</h1></header>
+            
+            
+            <section><ul>
+<li>View all the functions on the string object for example:</li>
+</ul>
+<!-- -->
+
+<div class="highlight"><pre><span></span><span class="nb">dir</span><span class="p">(</span><span class="s1">&#39;hello world&#39;</span><span class="p">)</span>
+</pre></div>
+
+<!-- -->
+
+<pre><code>[
+    ...
+    'find',
+    'format',
+    'format_map',
+    'index',
+    'isalnum',
+    ...
+]
+</code></pre></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="python_basics.markdown">python_basics.markdown</a>
+            </aside>
+            
+            <aside class="page_number">
+              42/54
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: python_basics.markdown -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-43">
+          <div class="inner">
+            
+            <header><h1>Variables are pointers to objects</h1></header>
+            
+            
+            <section><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">x</span>
+<span class="n">z</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="p">]</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">33</span>
+<span class="n">y</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
+</pre></div>
+
+<!-- -->
+
+<pre><code>33
+[1, 2, 3, 10]
+[[1, 2, 3, 10], [1, 2, 3, 10]]
+</code></pre></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="python_basics.markdown">python_basics.markdown</a>
+            </aside>
+            
+            <aside class="page_number">
+              43/54
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: python_basics.markdown -->
+      <div class="slide-wrapper">
+        <div class="slide slide-44">
+          <div class="inner">
+            
+            <header><h1>Exercise - Variables &amp; Collections</h1></header>
+            
+            
+            <section><ul>
+<li>Create a list containing some integer values</li>
+<li>Create a second list which contains the first list twice</li>
+<li>Append a string to the first list</li>
+<li>Print the second list</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="python_basics.markdown">python_basics.markdown</a>
+            </aside>
+            
+            <aside class="page_number">
+              44/54
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: python_basics.markdown -->
+      <div class="slide-wrapper">
+        <div class="slide slide-45">
+          <div class="inner">
+            
+            <header><h1>Functions</h1></header>
+            
+            
+            <section><ul>
+<li>Functions in Python can be standalone (do not need to be attached to a class)</li>
+<li>Defined using the <code>def</code> keyword</li>
+<li>Return values using the <code>return</code> keyword</li>
+<li>Arguments can be passed by name or position</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="python_basics.markdown">python_basics.markdown</a>
+            </aside>
+            
+            <aside class="page_number">
+              45/54
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: python_basics.markdown -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-46">
+          <div class="inner">
+            
+            <header><h1>Functions</h1></header>
+            
+            
+            <section><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span> <span class="o">+</span> <span class="n">z</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+
+<span class="c1"># x is passed implicitly; y &amp; z are passed explicitly</span>
+<span class="k">print</span><span class="p">(</span><span class="n">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">z</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">3</span><span class="p">))</span>
+</pre></div>
+
+<!-- -->
+
+<pre><code>6
+11
+</code></pre></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="python_basics.markdown">python_basics.markdown</a>
+            </aside>
+            
+            <aside class="page_number">
+              46/54
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: python_basics.markdown -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-47">
+          <div class="inner">
+            
+            <header><h1>Default arguments</h1></header>
+            
+            
+            <section><ul>
+<li>Default arguments can be defined on functions using the <code>=</code> syntax</li>
+<li>If the argument in that position is not defined, it will get the default</li>
+</ul>
+<!-- -->
+
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">print_greeting</span><span class="p">(</span><span class="n">username</span><span class="o">=</span><span class="s1">&#39;anonymous&#39;</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Welcome, {}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">username</span><span class="p">))</span>
+
+<span class="n">print_greeting</span><span class="p">(</span><span class="s1">&#39;George&#39;</span><span class="p">)</span>
+<span class="n">print_greeting</span><span class="p">()</span>
+</pre></div>
+
+<!-- -->
+
+<pre><code>'Welcome, George'
+'Welcome, anonymous'
+</code></pre></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="python_basics.markdown">python_basics.markdown</a>
+            </aside>
+            
+            <aside class="page_number">
+              47/54
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: python_basics.markdown -->
+      <div class="slide-wrapper">
+        <div class="slide slide-48">
+          <div class="inner">
+            
+            <header><h1>Classes</h1></header>
+            
+            
+            <section><ul>
+<li>Classes are defined using the <code>class</code> keyword</li>
+<li>The special method named <code>__init__</code> is the constructor</li>
+<li>All methods* take a first parameter, <code>self</code>, which references the particular object</li>
+<li>Python does not have private variables; the convention is that variables attached to the object with a underscore prefix are "considered" private</li>
+</ul>
+<p>* - The special cases of
+<a href="https://docs.python.org/3.6/library/functions.html#classmethod">@classmethod</a> &amp;
+<a href="https://docs.python.org/3.6/library/functions.html#staticmethod">@staticmethod</a> do not take the <code>self</code> parameter. These methods are not covered in this course</p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="python_basics.markdown">python_basics.markdown</a>
+            </aside>
+            
+            <aside class="page_number">
+              48/54
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: python_basics.markdown -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-49">
+          <div class="inner">
+            
+            <header><h1>Classes</h1></header>
+            
+            
+            <section><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Dog</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_age</span> <span class="o">=</span> <span class="n">age</span>
+
+    <span class="k">def</span> <span class="nf">describe</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="s1">&#39;My name is {} and my age is {}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_age</span><span class="p">))</span>
+
+<span class="n">my_dog</span> <span class="o">=</span> <span class="n">Dog</span><span class="p">(</span><span class="s1">&#39;Rover&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">my_dog</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+
+<!-- -->
+
+<pre><code>My name is Rover and my age is 3
+</code></pre></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="python_basics.markdown">python_basics.markdown</a>
+            </aside>
+            
+            <aside class="page_number">
+              49/54
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: python_basics.markdown -->
+      <div class="slide-wrapper">
+        <div class="slide slide-50">
+          <div class="inner">
+            
+            <header><h1>Exercise - Calculator Class</h1></header>
+            
+            
+            <section><ul>
+<li>Create a class named Calculator</li>
+<li>It's <code>__init__</code> method takes two arguments</li>
+<li>Create methods on the Calculator class called:<ul>
+<li><code>add</code></li>
+<li><code>subtract</code></li>
+<li><code>mult</code></li>
+<li><code>divide</code></li>
+</ul>
+</li>
+<li>This methods should each return the result of the calculations</li>
+<li>Create an object of type Calculator and test each of the methods</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="python_basics.markdown">python_basics.markdown</a>
+            </aside>
+            
+            <aside class="page_number">
+              50/54
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: python_basics.markdown -->
+      <div class="slide-wrapper">
+        <div class="slide slide-51">
+          <div class="inner">
+            
+            <header><h1>Class Inheritance</h1></header>
+            
+            
+            <section><ul>
+<li>Classes inherit using the syntax <code>Class(Subclass1, Subclass2):</code></li>
+<li>Child classes have access to all methods and variables (nothing really private)</li>
+<li>Call the parent methods with <code>super()</code></li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="python_basics.markdown">python_basics.markdown</a>
+            </aside>
+            
+            <aside class="page_number">
+              51/54
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: python_basics.markdown -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-52">
+          <div class="inner">
+            
+            <header><h1>Class Inheritance - Abstract Class</h1></header>
+            
+            
+            <section><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Animal</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_age</span> <span class="o">=</span> <span class="n">age</span>
+
+    <span class="k">def</span> <span class="nf">describe</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s1">&#39;This is {} and she is {} years old.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_age</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">speak</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="bp">NotImplemented</span><span class="p">(</span><span class="s1">&#39;speak method is not implemented&#39;</span><span class="p">)</span>
+</pre></div>
+</section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="python_basics.markdown">python_basics.markdown</a>
+            </aside>
+            
+            <aside class="page_number">
+              52/54
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: python_basics.markdown -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-53">
+          <div class="inner">
+            
+            <header><h1>Class Inheritance - Child Class</h1></header>
+            
+            
+            <section><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Dog</span><span class="p">(</span><span class="n">Animal</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="n">breed</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_breed</span> <span class="o">=</span> <span class="n">breed</span>
+
+    <span class="k">def</span> <span class="nf">speak</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s1">&#39;Woof woof!&#39;</span>
+
+    <span class="k">def</span> <span class="nf">describe</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span> <span class="o">+</span>
+            <span class="s1">&#39; She is a {}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_breed</span><span class="p">)</span>
+</pre></div>
+</section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="python_basics.markdown">python_basics.markdown</a>
+            </aside>
+            
+            <aside class="page_number">
+              53/54
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: python_basics.markdown -->
+      <div class="slide-wrapper">
+        <div class="slide has_code slide-54">
+          <div class="inner">
+            
+            <header><h1>Class Inheritance - Run</h1></header>
+            
+            
+            <section><div class="highlight"><pre><span></span><span class="n">my_dog</span> <span class="o">=</span> <span class="n">Dog</span><span class="p">(</span><span class="s1">&#39;Daisy&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;Labrador&#39;</span><span class="p">)</span>
+
+<span class="n">description</span> <span class="o">=</span> <span class="n">my_dog</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;Description: {}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">description</span><span class="p">))</span>
+
+<span class="n">speech</span> <span class="o">=</span> <span class="n">my_dog</span><span class="o">.</span><span class="n">speak</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;She says: &quot;{}&quot;&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">speech</span><span class="p">))</span>
+</pre></div>
+
+<!-- -->
+
+<pre><code>Description: This is Daisy and she is 3 years old. She is a Labrador
+She says: "Woof woof!"
+</code></pre></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="python_basics.markdown">python_basics.markdown</a>
+            </aside>
+            
+            <aside class="page_number">
+              54/54
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+  <div id="toc" class="sidebar hidden">
+    <h2>Table of Contents</h2>
+    <table>
+      <caption>Table of Contents</caption>
+      
+      <tr id="toc-row-1">
+        <th><a href="#slide1">Python Basics</a></th>
+        <td><a href="#slide1">1</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-2">
+        <th><a href="#slide2">What is Python?</a></th>
+        <td><a href="#slide2">2</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-3">
+        <th><a href="#slide3">Differences to Java</a></th>
+        <td><a href="#slide3">3</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-4">
+        <th><a href="#slide4">Python on Linux</a></th>
+        <td><a href="#slide4">4</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-5">
+        <th><a href="#slide5">Data Types</a></th>
+        <td><a href="#slide5">5</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-6">
+        <th><a href="#slide6">Strings</a></th>
+        <td><a href="#slide6">6</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-7">
+        <th><a href="#slide7">Input/Output</a></th>
+        <td><a href="#slide7">7</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-8">
+        <th><a href="#slide8">String Interpolation</a></th>
+        <td><a href="#slide8">8</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-9">
+        <th><a href="#slide9">String methods</a></th>
+        <td><a href="#slide9">9</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-10">
+        <th><a href="#slide10">Integers &amp; Floats</a></th>
+        <td><a href="#slide10">10</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-11">
+        <th><a href="#slide11">Casting - ValueError</a></th>
+        <td><a href="#slide11">11</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-12">
+        <th><a href="#slide12">Math Functions</a></th>
+        <td><a href="#slide12">12</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-13">
+        <th><a href="#slide13">Exercise - Math Program</a></th>
+        <td><a href="#slide13">13</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-14">
+        <th><a href="#slide14">Exercise - Math Program</a></th>
+        <td><a href="#slide14">14</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-15">
+        <th><a href="#slide15">Boolean Expressions</a></th>
+        <td><a href="#slide15">15</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-16">
+        <th><a href="#slide16">Comparison Operations</a></th>
+        <td><a href="#slide16">16</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-17">
+        <th><a href="#slide17">If / Else Statements</a></th>
+        <td><a href="#slide17">17</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-18">
+        <th><a href="#slide18">Boolean Expressions - Truthy &amp; Falsey</a></th>
+        <td><a href="#slide18">18</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-19">
+        <th><a href="#slide19">Boolean Expressions - Truthy &amp; Falsey</a></th>
+        <td><a href="#slide19">19</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-20">
+        <th><a href="#slide20">Exercise - Logical Operations</a></th>
+        <td><a href="#slide20">20</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-21">
+        <th><a href="#slide21">Exercise - Logical Operations</a></th>
+        <td><a href="#slide21">21</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-22">
+        <th><a href="#slide22">While Loops</a></th>
+        <td><a href="#slide22">22</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-23">
+        <th><a href="#slide23">For Loops</a></th>
+        <td><a href="#slide23">23</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-24">
+        <th><a href="#slide24">For Loops</a></th>
+        <td><a href="#slide24">24</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-25">
+        <th><a href="#slide25">Iterables</a></th>
+        <td><a href="#slide25">25</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-26">
+        <th><a href="#slide26">Iterable Functions</a></th>
+        <td><a href="#slide26">26</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-27">
+        <th><a href="#slide27">Iterable Functions</a></th>
+        <td><a href="#slide27">27</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-28">
+        <th><a href="#slide28">Iterable Functions</a></th>
+        <td><a href="#slide28">28</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-29">
+        <th><a href="#slide29">Range</a></th>
+        <td><a href="#slide29">29</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-30">
+        <th><a href="#slide30">For Loops with Range</a></th>
+        <td><a href="#slide30">30</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-31">
+        <th><a href="#slide31">Loops - Control Flow</a></th>
+        <td><a href="#slide31">31</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-32">
+        <th><a href="#slide32">Mutable Collections - Lists</a></th>
+        <td><a href="#slide32">32</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-33">
+        <th><a href="#slide33">Mutable Collections - Lists</a></th>
+        <td><a href="#slide33">33</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-34">
+        <th><a href="#slide34">Mutable Collections - Sets</a></th>
+        <td><a href="#slide34">34</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-35">
+        <th><a href="#slide35">Mutable Collections - Dict</a></th>
+        <td><a href="#slide35">35</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-36">
+        <th><a href="#slide36">Exercise - Collections</a></th>
+        <td><a href="#slide36">36</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-37">
+        <th><a href="#slide37">For Comprehensions</a></th>
+        <td><a href="#slide37">37</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-38">
+        <th><a href="#slide38">For Comprehensions - Lists</a></th>
+        <td><a href="#slide38">38</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-39">
+        <th><a href="#slide39">For Comprehensions - Dicts</a></th>
+        <td><a href="#slide39">39</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-40">
+        <th><a href="#slide40">Dynamic vs Static Typing</a></th>
+        <td><a href="#slide40">40</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-41">
+        <th><a href="#slide41">Dynamic Typing</a></th>
+        <td><a href="#slide41">41</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-42">
+        <th><a href="#slide42">Everything is an Object</a></th>
+        <td><a href="#slide42">42</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-43">
+        <th><a href="#slide43">Variables are pointers to objects</a></th>
+        <td><a href="#slide43">43</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-44">
+        <th><a href="#slide44">Exercise - Variables &amp; Collections</a></th>
+        <td><a href="#slide44">44</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-45">
+        <th><a href="#slide45">Functions</a></th>
+        <td><a href="#slide45">45</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-46">
+        <th><a href="#slide46">Functions</a></th>
+        <td><a href="#slide46">46</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-47">
+        <th><a href="#slide47">Default arguments</a></th>
+        <td><a href="#slide47">47</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-48">
+        <th><a href="#slide48">Classes</a></th>
+        <td><a href="#slide48">48</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-49">
+        <th><a href="#slide49">Classes</a></th>
+        <td><a href="#slide49">49</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-50">
+        <th><a href="#slide50">Exercise - Calculator Class</a></th>
+        <td><a href="#slide50">50</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-51">
+        <th><a href="#slide51">Class Inheritance</a></th>
+        <td><a href="#slide51">51</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-52">
+        <th><a href="#slide52">Class Inheritance - Abstract Class</a></th>
+        <td><a href="#slide52">52</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-53">
+        <th><a href="#slide53">Class Inheritance - Child Class</a></th>
+        <td><a href="#slide53">53</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-54">
+        <th><a href="#slide54">Class Inheritance - Run</a></th>
+        <td><a href="#slide54">54</a></td>
+      </tr>
+      
+      
+    </table>
+  </div>
+  
+  <div id="help" class="sidebar hidden">
+    <h2>Help</h2>
+    <table>
+      <caption>Help</caption>
+      <tr>
+        <th>Table of Contents</th>
+        <td>t</td>
+      </tr>
+      <tr>
+        <th>Exposé</th>
+        <td>ESC</td>
+      </tr>
+      <tr>
+        <th>Full screen slides</th>
+        <td>e</td>
+      </tr>
+      <tr>
+        <th>Presenter View</th>
+        <td>p</td>
+      </tr>
+      <tr>
+        <th>Source Files</th>
+        <td>s</td>
+      </tr>
+      <tr>
+        <th>Slide Numbers</th>
+        <td>n</td>
+      </tr>
+      <tr>
+        <th>Toggle screen blanking</th>
+        <td>b</td>
+      </tr>
+      <tr>
+        <th>Show/hide slide context</th>
+        <td>c</td>
+      </tr>
+      <tr>
+        <th>Notes</th>
+        <td>2</td>
+      </tr>
+      <tr>
+        <th>Help</th>
+        <td>h</td>
+      </tr>
+    </table>
+  </div>
+  <script>main()</script>
+</body>
+</html>
